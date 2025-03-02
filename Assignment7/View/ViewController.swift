@@ -8,6 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    @IBOutlet weak var StateTableView: UITableView!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 50
     }
@@ -35,6 +36,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail" {
+            if let destinationVC = segue.destination as? DetailViewController {
+                // Pass the selected state to the destination view controller
+                if let indexPath = StateTableView.indexPathForSelectedRow {
+                    destinationVC.selectedState = states[indexPath.row];
+                    
+                }
+            }
+        }
     }
 
 

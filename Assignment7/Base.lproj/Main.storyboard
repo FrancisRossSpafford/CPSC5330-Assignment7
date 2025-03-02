@@ -36,6 +36,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="iXd-gU-G9E" kind="showDetail" identifier="showDetail" id="ici-Cz-WTg"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -53,25 +56,45 @@
                             <constraint firstItem="wQ2-nE-PVx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fs6-jF-grD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="StateTableView" destination="wQ2-nE-PVx" id="oAf-bW-JWv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="-27"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="1Vt-sx-jro">
             <objects>
-                <viewController id="iXd-gU-G9E" sceneMemberID="viewController">
+                <viewController id="iXd-gU-G9E" customClass="DetailViewController" customModule="Assignment7" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="irk-v9-hxP">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State Capital" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYU-jS-JUU">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="i4n-6y-oZ1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="i4n-6y-oZ1" firstAttribute="bottom" secondItem="vYU-jS-JUU" secondAttribute="bottom" id="CXg-10-utG"/>
+                            <constraint firstItem="vYU-jS-JUU" firstAttribute="top" secondItem="i4n-6y-oZ1" secondAttribute="top" id="PmD-1Q-Odx"/>
+                            <constraint firstItem="i4n-6y-oZ1" firstAttribute="trailing" secondItem="vYU-jS-JUU" secondAttribute="trailing" id="X8b-7C-OIm"/>
+                            <constraint firstItem="vYU-jS-JUU" firstAttribute="leading" secondItem="i4n-6y-oZ1" secondAttribute="leading" id="hdz-S7-OTL"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="CapitalLabel" destination="vYU-jS-JUU" id="dmv-84-rCR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FHy-ok-dDk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="813" y="-27"/>
+            <point key="canvasLocation" x="1269" y="-27"/>
         </scene>
     </scenes>
     <resources>
