@@ -12,13 +12,13 @@ class DetailViewController: UIViewController {
 
     var selectedState: String?
     
-    @IBOutlet weak var CapitalLabel: UILabel!
+    
+    @IBOutlet weak var CapitolLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        CapitalLabel.text = selectedState
-        
+        CapitolLabel.text = StateCapitolLogic.getCapitol(of: selectedState!)
        
     }
 

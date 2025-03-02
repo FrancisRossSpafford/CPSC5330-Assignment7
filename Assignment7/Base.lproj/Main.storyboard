@@ -89,7 +89,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="CapitalLabel" destination="vYU-jS-JUU" id="dmv-84-rCR"/>
+                        <outlet property="CapitolLabel" destination="vYU-jS-JUU" id="uAW-Id-WJr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FHy-ok-dDk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
